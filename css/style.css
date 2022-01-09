@@ -1,0 +1,209 @@
+@font-face {
+  font-family: Roboto;
+   src: url("../assets/fonts/roboto.ttf");
+ }
+  {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth; 
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #270402;
+  }
+  
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 50px;
+  }
+  
+  .header {
+    background-color: #d05b15;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .nav-link {
+    position: relative;
+    padding: 0 12px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #fff; 
+  }
+  
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: -5px;
+    width: calc(100% - 24px);
+    height: 1px;
+    background-color: #fff;
+    opacity: 0;
+    transition: .1s;
+  }
+  
+  .nav-link:hover::after {
+    opacity: .5;
+    animation-name: slidein;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slidein {
+    from {
+      width: 0;
+    }
+    to {
+      width: calc(100% - 24px);
+    }
+  }
+  
+  .main {
+    margin-bottom: auto;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .section {
+    width: calc(50% - 20px);
+    padding: 10px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #270402
+  }
+  
+  .section-education,
+  .section-english {
+    border-bottom: 0;
+  }
+  
+  .section-title {
+    margin-bottom: 20px;  
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #d05b15;
+  }
+  
+  .section-profile {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 30px 10px 10px;
+    border-bottom: 1px solid #d05b15;
+  }
+  
+  .pre {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .section-profile-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;  
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+  /* name */
+  .main-title {
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+    color: #270402;
+    font-size: 30px;
+    font-weight: 3200;
+    letter-spacing: 10px;
+    line-height: 50px;
+    word-spacing: 3px;
+  }
+   /* prof logo */
+  .section-subtitle {
+    margin-top: 20px;
+    color: #270402;
+    line-height: 20px;
+    font-weight: 100;
+    letter-spacing: 2px;
+  }
+  
+  .section-profile-logo {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .9);
+    filter: grayscale(0.2) brightness(1.05);
+    transition: .3s;
+  }
+  
+  .section-profile-logo:hover {
+    filter: none;
+  }
+  
+  .section-list {
+    margin: 0;
+    padding: 0;  
+    list-style: none;
+  }
+  
+  .section-item {
+    position: relative;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    padding-left: 30px;
+  }
+
+  .section-item span {
+    color: #d05b15;
+  }
+  
+  .section-item a {
+    text-decoration: none;
+    color: #d05b15;
+    transition: color 0.5s;
+  }
+  
+  .section-item a:hover {
+    color: #270402;
+  }
+
+  .footer {
+    background-color: #d05b15;
+    padding: 20px;  
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: #fff;
+  }
