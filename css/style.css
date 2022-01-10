@@ -132,7 +132,7 @@
     text-transform: uppercase;
     font-size: 10px;
   }
-  /* name */
+  
   .main-title {
     position: relative;
     padding: 0;
@@ -144,7 +144,7 @@
     line-height: 50px;
     word-spacing: 3px;
   }
-   /* prof logo */
+  
   .section-subtitle {
     margin-top: 20px;
     color: #270402;
