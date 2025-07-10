@@ -1,4 +1,4 @@
-# [_rsschool-cv_](https://finmaster-dvd.github.io/rsschool-cv/cv)
+# [_rsschool-cv_](https://finmaster-dvd.github.io/rsschool-cv/)
 
 # Vitaly Kirillin
 ###### Junior Front-End Developer, Russia, RB, Ufa. I have a wide range of interests, but my preferred one is webtenology. 
