@@ -1,4 +1,4 @@
-{
+* {
   box-sizing: border-box;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 .nav-link::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 12px;
   bottom: -5px;
@@ -188,21 +188,27 @@ body {
   color: #fff;
 }
 
-@media screen and (min-width: 1200px) {
+/* MOBILE FIRST APPROACH */
+
+@media screen and (min-width: 768px) {
   .section {
-    width: calc(50% - 10px);
+    width: calc(50% - 10px); /* Гарантирует две колонки */
   }
 }
 
-@media screen and (max-width: 1199px) {
+/* LARGER SCREENS */
+
+@media screen and (min-width: 1200px) {
   .section {
-    width: 100%;
+    width: calc(50% - 10px); /* Увеличиваем ширину колонок */
   }
 }
+
+/* Smaller screens (mobile-first approach) */
 
 @media screen and (max-width: 767px) {
   .section {
-    width: 100%;
+    width: 100%; /* Одна колонка на мобильных устройствах */
   }
 
   .nav-list {
@@ -231,18 +237,7 @@ body {
   }
 }
 
-.contacts-item {
-  font-size: 16px;
-}
-
-.contacts-item a {
-  font-size: inherit;
-}
-
-.section-profile-logo {
-  width: 100px;
-  height: 100px;
-}
+/* Footer styles */
 
 .footer img {
   max-width: 100%;
