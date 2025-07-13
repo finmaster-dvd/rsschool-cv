@@ -1,209 +1,267 @@
-@font-face {
-  font-family: Roboto;
-    src: url("./assets/fonts/roboto.ttf");
- }
-  {
-    box-sizing: border-box;
+{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #270402;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background-color: #d05b15;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0 12px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #fff;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: -5px;
+  width: calc(100% - 24px);
+  height: 1px;
+  background-color: #fff;
+  opacity: 0;
+  transition: .1s;
+}
+
+.nav-link:hover::after {
+  opacity: .5;
+  animation-name: slidein;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    width: 0;
   }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 320px;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #270402;
-  }
-  
-  .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    min-height: 50px;
-  }
-  
-  .header {
-    color: #d05b15;
-    background-color: #d05b15;
-  }
-  
-  .nav-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    list-style: none;
-  }
-  
-  .nav-link {
-    position: relative;
-    padding: 0 12px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 50px;
-    color: #ffffff;
-  }
-  
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 12px;
-    bottom: -5px;
+  to {
     width: calc(100% - 24px);
-    height: 1px;
-    background-color: #fff;
-    opacity: .1;
-    transition: .1s;
   }
-  
-  .nav-link:hover::after {
-    opacity: .5;
-    animation-name: slidein;
-    animation-duration: .1s;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes slidein {
-    from {
-      width: 0;
-    }
-    to {
-      width: calc(100% - 24px);
-    }
-  }
-  
-  .main {
-    margin-bottom: auto;
-  }
-  
-  .main-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
+}
+
+.main {
+  margin-bottom: auto;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section {
+  width: calc(50% - 20px);
+  padding: 10px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #270402;
+}
+
+.section-education,
+.section-english {
+  border-bottom: 0;
+}
+
+.pre {
+  padding: 0;
+  margin: 0;
+}
+
+.section-profile {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 30px 10px 10px;
+  border-bottom: 1px solid #d05b15;
+}
+
+.section-profile-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.main-title {
+  position: relative;
+  padding: 0;
+  margin-bottom: 20px;
+  color: #270402;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  line-height: 50px;
+  word-spacing: 3px;
+}
+
+.section-subtitle {
+  margin-top: 20px;
+  color: #270402;
+  line-height: 20px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.section-profile-logo {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .9);
+  filter: grayscale(0.2) brightness(1.05);
+  transition: .3s;
+}
+
+.section-profile-logo:hover {
+  filter: none;
+}
+
+.section-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-item {
+  position: relative;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  padding-left: 30px;
+}
+
+.section-item span {
+  color: #d05b15;
+}
+
+.section-item a {
+  text-decoration: none;
+  color: #d05b15;
+  transition: color 0.5s;
+}
+
+.section-item a:hover {
+  color: #270402;
+}
+
+.footer {
+  background-color: #d05b15;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+}
+
+/* Media Queries */
+
+/* Для широких экранов (мониторы) */
+@media screen and (min-width: 1200px) {
   .section {
-    width: calc(50% - 20px);
-    padding: 10px;
-    padding-bottom: 35px;
-    border-bottom: 1px solid #270402
+    width: calc(50% - 20px); /* Контейнер занимает половину ширины экрана */
   }
-  
-  .section-education,
-  .section-english {
-    border-bottom: 0;
+}
+
+/* Для средних экранов (планшеты) */
+@media screen and (max-width: 1199px) {
+  .section {
+    width: 100%; /* Контейнеры занимают всю ширину экрана */
   }
-  
-  .section-title {
-    margin-bottom: 20px;  
-    font-size: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #d05b15;
+}
+
+/* Для узких экранов (телефоны) */
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 10px; /* Уменьшение внутреннего отступа */
   }
-  
+
+  .nav-list {
+    flex-direction: column; /* Меняем направление меню на вертикальное */
+  }
+
+  .nav-link {
+    padding: 10px 0; /* Интервал между элементами меню */
+  }
+
   .section-profile {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding: 30px 10px 10px;
-    border-bottom: 1px solid #d05b15
-  }
-  
-  .pre {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .section-profile-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;  
-    text-transform: uppercase;
-    font-size: 10px;
-  }
-  /* name */
-  .main-title {
-    position: relative;
-    padding: 0;
-    margin-bottom: 20px;
-    color: #270402;     
-    font-size: 30px;
-    font-weight: 3200;
-    letter-spacing: 10px;
-    line-height: 50px;
-  }
-   /* prof logo */
-  .section-subtitle {
-    margin-top: 20px;
-    color: #270402;
-    line-height: 20px;
-    font-weight: 100;
-    letter-spacing: 2px;
-  }
-  
-  .section-profile-logo {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 1px 4px rgba(1, 1, 1, .5);
-    filter: grayscale(0.2) brightness(1.05);
-    transition: .3s;
-  }
-  
-  .section-profile-logo:hover {
-    filter: none;
-  }
-  
-  .section-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .section-item {
-    position: relative;
-    margin: 0;
-    margin-bottom: 10px;
-    padding: 0;
-    padding-left: 30px;
-  }
-
-  .section-item span {
-    color: #d05b15;
-  }
-  
-  .section-item a {
-    text-decoration: none;
-    color: #d05b15;
-    transition: color 0.5s;
-  }
-  
-  .section-item a:hover {
-    color: #270402;
-  }
-
-  .footer {
-    background-color: #d05b15;
-    padding: 20px;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Расположим профиль вертикально */
     align-items: center;
-    margin: 0 auto;
-    color: #fff;
   }
+
+  .section-profile-logo {
+    margin-bottom: 20px; /* Небольшой отступ снизу */
+  }
+
+  .section-profile-title h1 {
+    font-size: 24px; /* Уменьшим размер заголовка */
+  }
+
+  .section-profile-title h4 {
+    font-size: 16px; /* Уменьшим размер подзаголовка */
+  }
+}
+
+/* Дальнейшие настройки */
+
+/* Контактная информация */
+.contacts-item {
+  font-size: 16px;
+}
+
+.contacts-item a {
+  font-size: inherit;
+}
+
+/* Профиль */
+.section-profile-logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* Footer */
+.footer img {
+  max-width: 100%;
+  height: auto;
+}
