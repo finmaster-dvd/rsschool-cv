@@ -80,10 +80,19 @@ body {
 }
 
 .main-container {
-  display: block; /* Меняем flex на block, чтобы секции шли одна за другой */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-profile {
+  width: 100%;
+  padding: 30px 10px 10px;
+  border-bottom: 1px solid #d05b15;
 }
 
 .section {
+  width: calc(50% - 10px);
   padding: 10px;
   padding-bottom: 35px;
   border-bottom: 1px solid #270402;
@@ -92,14 +101,6 @@ body {
 .section-education,
 .section-english {
   border-bottom: 0;
-}
-
-.section-profile {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  padding: 30px 10px 10px;
-  border-bottom: 1px solid #d05b15;
 }
 
 .section-profile-title {
@@ -187,57 +188,49 @@ body {
   color: #fff;
 }
 
-/* Media Queries */
-
-/* Широкие экраны (мониторы) */
 @media screen and (min-width: 1200px) {
   .section {
-    width: calc(50% - 20px); /* Ширина секции уменьшена на 20px для компенсации отступов */
+    width: calc(50% - 10px);
   }
 }
 
-/* Средние экраны (планшеты) */
 @media screen and (max-width: 1199px) {
   .section {
-    width: 100%; /* Секции занимают всю ширину экрана */
+    width: 100%;
   }
 }
 
-/* Узкие экраны (телефоны) */
 @media screen and (max-width: 767px) {
   .section {
-    padding: 10px; /* Уменьшаем внутреннее отступление */
+    width: 100%;
   }
 
   .nav-list {
-    flex-direction: column; /* Меняем направление меню на вертикальное */
+    flex-direction: column;
   }
 
   .nav-link {
-    padding: 10px 0; /* Интервал между элементами меню */
+    padding: 10px 0;
   }
 
   .section-profile {
-    flex-direction: column; /* Расположим профиль вертикально */
+    flex-direction: column;
     align-items: center;
   }
 
   .section-profile-logo {
-    margin-bottom: 20px; /* Добавляем интервал снизу */
+    margin-bottom: 20px;
   }
 
   .section-profile-title h1 {
-    font-size: 24px; /* Уменьшаем размер заголовка */
+    font-size: 24px;
   }
 
   .section-profile-title h4 {
-    font-size: 16px; /* Уменьшаем размер подзаголовка */
+    font-size: 16px;
   }
 }
 
-/* Дальнейшие настройки */
-
-/* Контактная информация */
 .contacts-item {
   font-size: 16px;
 }
@@ -246,13 +239,11 @@ body {
   font-size: inherit;
 }
 
-/* Профиль */
 .section-profile-logo {
   width: 100px;
   height: 100px;
 }
 
-/* Footer */
 .footer img {
   max-width: 100%;
   height: auto;
