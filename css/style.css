@@ -80,13 +80,10 @@ body {
 }
 
 .main-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: block; /* Меняем flex на block, чтобы секции шли одна за другой */
 }
 
 .section {
-  width: calc(50% - 20px);
   padding: 10px;
   padding-bottom: 35px;
   border-bottom: 1px solid #270402;
@@ -95,11 +92,6 @@ body {
 .section-education,
 .section-english {
   border-bottom: 0;
-}
-
-.pre {
-  padding: 0;
-  margin: 0;
 }
 
 .section-profile {
@@ -197,24 +189,24 @@ body {
 
 /* Media Queries */
 
-/* Для широких экранов (мониторы) */
+/* Широкие экраны (мониторы) */
 @media screen and (min-width: 1200px) {
   .section {
-    width: calc(50% - 20px); /* Контейнер занимает половину ширины экрана */
+    width: calc(50% - 20px); /* Ширина секции уменьшена на 20px для компенсации отступов */
   }
 }
 
-/* Для средних экранов (планшеты) */
+/* Средние экраны (планшеты) */
 @media screen and (max-width: 1199px) {
   .section {
-    width: 100%; /* Контейнеры занимают всю ширину экрана */
+    width: 100%; /* Секции занимают всю ширину экрана */
   }
 }
 
-/* Для узких экранов (телефоны) */
+/* Узкие экраны (телефоны) */
 @media screen and (max-width: 767px) {
   .section {
-    padding: 10px; /* Уменьшение внутреннего отступа */
+    padding: 10px; /* Уменьшаем внутреннее отступление */
   }
 
   .nav-list {
@@ -231,15 +223,15 @@ body {
   }
 
   .section-profile-logo {
-    margin-bottom: 20px; /* Небольшой отступ снизу */
+    margin-bottom: 20px; /* Добавляем интервал снизу */
   }
 
   .section-profile-title h1 {
-    font-size: 24px; /* Уменьшим размер заголовка */
+    font-size: 24px; /* Уменьшаем размер заголовка */
   }
 
   .section-profile-title h4 {
-    font-size: 16px; /* Уменьшим размер подзаголовка */
+    font-size: 16px; /* Уменьшаем размер подзаголовка */
   }
 }
 
