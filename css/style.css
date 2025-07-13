@@ -1,13 +1,13 @@
 @font-face {
   font-family: Roboto;
-   src: url("../assets/fonts/roboto.ttf");
+    src: url("./assets/fonts/roboto.ttf");
  }
   {
     box-sizing: border-box;
   }
   
   html {
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
   }
   
   body {
@@ -31,6 +31,7 @@
   }
   
   .header {
+    color: #d05b15;
     background-color: #d05b15;
   }
   
@@ -48,7 +49,7 @@
     font-size: 20px;
     font-weight: 300;
     line-height: 50px;
-    color: #fff; 
+    color: #ffffff;
   }
   
   .nav-link::after {
@@ -59,7 +60,7 @@
     width: calc(100% - 24px);
     height: 1px;
     background-color: #fff;
-    opacity: 0;
+    opacity: .1;
     transition: .1s;
   }
   
@@ -115,7 +116,7 @@
     justify-content: space-around;
     width: 100%;
     padding: 30px 10px 10px;
-    border-bottom: 1px solid #d05b15;
+    border-bottom: 1px solid #d05b15
   }
   
   .pre {
@@ -137,12 +138,11 @@
     position: relative;
     padding: 0;
     margin-bottom: 20px;
-    color: #270402;
+    color: #270402;     
     font-size: 30px;
     font-weight: 3200;
     letter-spacing: 10px;
     line-height: 50px;
-    word-spacing: 3px;
   }
    /* prof logo */
   .section-subtitle {
@@ -154,11 +154,11 @@
   }
   
   .section-profile-logo {
-    width: 100px;
+    width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .9);
+    box-shadow: 0 1px 4px rgba(1, 1, 1, .5);
     filter: grayscale(0.2) brightness(1.05);
     transition: .3s;
   }
@@ -169,7 +169,7 @@
   
   .section-list {
     margin: 0;
-    padding: 0;  
+    padding: 0;
     list-style: none;
   }
   
@@ -197,7 +197,7 @@
 
   .footer {
     background-color: #d05b15;
-    padding: 20px;  
+    padding: 20px;
   }
   
   .footer-container {
